@@ -52,7 +52,7 @@ class MainComponent extends React.Component {
           <img alt={this.state.weather.weather[0].description} src={this.state.weather.weather[0].icon} />
           <div>
             <span>{this.state.temp}</span>
-            <span onClick={() => this.handleClick()}>{this.state.isCelsius ? '\xB0C' : '\xB0F'}</span>
+            <span className="toggle-temp" onClick={() => this.handleClick()}>{this.state.isCelsius ? '\xB0C' : '\xB0F'}</span>
           </div>
         </div>
       );
