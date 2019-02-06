@@ -54,6 +54,10 @@ class MainComponent extends React.Component {
             <span>{this.state.temp}</span>
             <span className="toggle-temp" onClick={() => this.handleClick()}>{this.state.isCelsius ? '\xB0C' : '\xB0F'}</span>
           </div>
+          <div>{this.state.weather.weather[0].description}</div>
+          <div>Sunrise: {String(new Date(this.state.weather.sys.sunrise))}</div>
+          <div>Sunset: {String(new Date(this.state.weather.sys.sunset))}</div>
+          <div>Dt: {String(new Date(this.state.weather.dt))}</div>
         </div>
       );
     } else {
